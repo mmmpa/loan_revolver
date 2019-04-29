@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: mmmpa/rust_wasm_node:latest
+    steps:
+      - checkout
+      - restore_cache:
+          key: project-cache
+
+      - run: cargo test
+
+      - save_cache:
+          key: project-cache
+          paths:
+            - "~/.cargo"
+            - "./target"
+
