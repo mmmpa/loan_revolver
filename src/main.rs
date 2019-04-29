@@ -2,7 +2,6 @@ mod loan_revolver;
 
 use std::io::Write;
 use std::str::{FromStr, ParseBoolError};
-use std::slice::Iter;
 use crate::loan_revolver::{LoanRevolver, LoanRevolverError};
 
 // loan_revolver a 1000000 45000
